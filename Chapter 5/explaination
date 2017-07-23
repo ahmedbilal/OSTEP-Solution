@@ -1,0 +1,46 @@
+-------------- Question 1 --------------------
+Although fork() creates copy of parent process
+however, child and parent process have thier
+own private address space exclusive of each
+other. Both process (child and parent) can't
+interfare in other's address space (memory).
+
+So, each maintain their own copy of variables.
+
+-------------- Question 2 --------------------
+
+
+
+-------------- Question 3 --------------------
+Yes, It can be possible (although not proved)
+to ensure that child process always print first
+********  See my question3.c code ************
+
+-------------- Question 4 --------------------
+See question4.c
+Each variant serves its own purpose
+1. execl and execv are nearly identical (have very little difference) (can be used interchangbly with little change)
+2. execlp and execvp are nearly identical
+3. execle and execvpe are nearly identical
+
+Functions have l in their name need argument seperated by commas
+Function having v in their name need arguments as char * array
+Function having e need enivronment argument char * array
+
+-------------- Question 5 --------------------
+Wait return process id of terminating process (of which we are waiting for termination)
+or It return -1 if some error occurred.
+
+If we use wait() in child process then wait() returns -1. Because, there is no child
+of child so, there is no wait for any process (child process) to exit.
+
+-------------- Question 6 --------------------
+
+
+
+-------------- Question 7 --------------------
+If we close std_out file descriptor we can't be
+able to write something on the screen using
+printf() however no error would occurred.
+
+-------------- Question 8 --------------------
