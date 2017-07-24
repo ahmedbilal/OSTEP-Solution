@@ -14,12 +14,9 @@ int main()
     }
     else if (rc > 0)
     {
-        printf("I am parent process. My PID  is %d\n", getpid());
-        printf("Return Code value is %d\n", rc);
         int status;
-        waitpid(rc, &status, WEXITED);
-        WIFEXITED(status);
-        printf("Child process successfully exit\n");
+        waitpid(rc, &status, 0);
+        printf("I am parent process. My PID  is %d\n", getpid());        
     }
     else
     {
