@@ -89,9 +89,7 @@ Offset = 1 - 64 = -63
 
 So, Answer = Segmentation Fault
 
-:closed_book::closed_book::closed_book::closed_book:
-
-### Do the Following part yourself
+### :closed_book: Do the Following part yourself
 
 ```bash
 segmentation.py -a 128 -p 512 -b 0 -l 20 -B 512 -L 20 -s 1
