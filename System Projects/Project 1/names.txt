@@ -1,0 +1,5 @@
+Smith, Brett     555-4321
+Doe, John        555-1234
+Doe, Jane        555-3214
+Avery, Cory      555-4132
+Fogarty, Suzie   555-2314

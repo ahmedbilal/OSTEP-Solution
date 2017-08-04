@@ -98,3 +98,65 @@ segmentation.py -a 128 -p 512 -b 0 -l 20 -B 512 -L 20 -s 1
 ```bash
 segmentation.py -a 128 -p 512 -b 0 -l 20 -B 512 -L 20 -s 2
 ```
+
+## Question 2
+
+### Now, let’s see if we understand this tiny address space we’ve constructed (using the parameters from the question above). What is the highest legal virtual address in segment 0? What about the lowest legal virtual address in segment 1? What are the lowest and highest illegal addresses in this entire address space? Finally, how would you run segmentation.py with the -A flag to test if you are right?
+
+```bash
+segmentation.py -a 128 -p 512 -b 0 -l 20 -B 512 -L 20 -s 0
+```
+
+**Highest Legal VA in Seg 0 = 19**
+
+**Lowest Legal VA in Seg 1 = 108**
+
+**Lowest Illegal VA in Whole Addr. Space = 20**
+
+```bash
+./segmentation.py -a 128 -p 512 -b 0 -l 20 -B 512 -L 20 -s 0 -c -A 20
+```
+
+**Highest Illegal VA in Whole Addr. Space = 107**
+
+```bash
+./segmentation.py -a 128 -p 512 -b 0 -l 20 -B 512 -L 20 -s 0 -c -A 107
+```
+
+## Question 3
+
+### Let’s say we have a tiny 16-byte address space in a 128-byte physical memory. What base and bounds would you set up so as to get the simulator to generate the following translation results for the specified address stream: valid, valid, violation, ..., violation, valid, valid? Assume the following parameters:
+
+```bash
+segmentation.py -a 16 -p 128
+-A 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15
+--b0 ? --l0 ? --b1 ? --l1 ?
+```
+
+**Seg 0 base = 0**
+
+**Seg 0 bound = 2**
+
+**Seg 1 base = 128**
+
+**Seg 1 bound = 2**
+
+```bash
+ ./segmentation.py -a 16 -p 128 -A 0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15 --b0 0 --l0 2 --b1 128 --l1 2 -c
+ ```
+
+## Question 4
+
+### Assuming we want to generate a problem where roughly 90% of the randomly-generated virtual addresses are valid (i.e., not segmentation violations). How should you configure the simulator to do so? Which parameters are important?
+
+
+
+## Question 5
+
+### Can you run the simulator such that no virtual addresses are valid? How?
+
+Pretty simple
+
+```bash
+./segmentation.py -b 0 -l 0 -B 0 -L 0 -c
+```
