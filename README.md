@@ -8,7 +8,7 @@ If you want to contribute or found some mistake just send me email at [ahmedbila
 [Slides By Prof. Kai Dong](http://cscwd2006.seu.edu.cn/PersonalPage/dk/courses.htm)
 **(External Link)**
 
-if the above link does work [Slides](https://mega.nz/#F!5EJWQLTb!Yh-BmhHr31xi406K0UQIrQ)
+if the above link does not work [Slides by Prof. Kai Dong](https://mega.nz/#F!5EJWQLTb!Yh-BmhHr31xi406K0UQIrQ)
 
 ## Index
 
