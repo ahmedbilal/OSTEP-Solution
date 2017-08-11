@@ -24,3 +24,4 @@ if the above link does not work [Slides by Prof. Kai Dong](https://mega.nz/#F!5E
 * [Chapter 15](https://github.com/ahmedbilal/OSTEP-Solution/tree/master/Chapter%2015)
 * [Chapter 16](https://github.com/ahmedbilal/OSTEP-Solution/tree/master/Chapter%2016)
 * [Chapter 17](https://github.com/ahmedbilal/OSTEP-Solution/tree/master/Chapter%2017)
+* [Chapter 18](https://github.com/ahmedbilal/OSTEP-Solution/tree/master/Chapter%2018)
