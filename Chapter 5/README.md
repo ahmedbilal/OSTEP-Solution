@@ -27,8 +27,10 @@ Both are able to write to the file but the order in which they do is un-determin
 
 ### Write another program using fork(). The child process should print “hello”; the parent process should print “goodbye”. You should try to ensure that the child process always prints first; can you do this without calling wait() in the parent?
 
-Yes, It can be possible (although not sure how much reliable it is) to ensure that child process always print first without **wait()**.
-**See my question3.c code**.
+~~Yes, It can be possible (although not sure how much reliable it is) to ensure that child process always print first without **wait()**.
+**See my question3.c code**.~~
+
+**See question3-yorwos.c suggested by yorwos**
 
 ## Question 4
 
