@@ -56,7 +56,17 @@ From Time 0 to 201, Job 0 runs for 200 time unit while Job 1 runs for 2 time uni
 
 ## Question 5
 
-If you have some answer for this question please email me or commit and request push.
+The answer is '200ms'. Time quantum of question 5 is '10ms'. After Job1 is executed in 10ms, priority will be lowered. If other jobs that has lower than 10ms, then job1 will not get any chance of execution.
+
+So this is the situation that we have to solve. If we boost properly(like at least 5% in this problem), it will regain its priority to be in queue. Equation will be like this.
+
+<!--we have to devide 10ms to X because Job1 is at least executed once-->
+
+$(10ms/X)*100>=0.05$ 
+
+$X<=200ms$
+
+Assume that we have 200ms boost period. When Job1 was executed by 10ms and priority get lowered, boost will give every job a highest priority. Job1 will get guaranteed execution time at least 5% (That means if you set boost time lower than 200ms Job1 will get higher CPU time)
 
 ## Question 6
 
