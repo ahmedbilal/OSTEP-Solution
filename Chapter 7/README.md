@@ -5,9 +5,7 @@
 ### Compute the response time and turnaround time when running three jobs of length 200 with the SJF and FIFO schedulers.
 ```shell
 ./scheduler.py -p FIFO -l 200,200,200 -c
-```
 
-```
 ARG policy FIFO
 ARG jlist 200,200,200
 
@@ -34,9 +32,7 @@ Final statistics:
 
 ```shell
 ./scheduler.py -p SJF -l 200,200,200 -c
-```
 
-```
 ARG policy SJF
 ARG jlist 200,200,200
 
