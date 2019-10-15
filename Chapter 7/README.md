@@ -152,17 +152,8 @@ Final statistics:
 
 ### For what types of workloads does SJF deliver the same turnaround times as FIFO?
 
-For Jobs having same length, SJF delivers the same turnaround times as FIFO.
-
-```shell
-./scheduler.py -p FIFO -l 100,100,100 -c
-```
-
-```shell
-./scheduler.py -p SJF -l 100,100,100 -c
-```
-
-Both have same turnaround.
+SJF always gives the same turnaround time as FIFO except when a shorter job arrives after a longer job.
+As long as all job lengths are either equal or arrive in ascending order, the turnaround times will be the same.
 
 ## Question 5
 
