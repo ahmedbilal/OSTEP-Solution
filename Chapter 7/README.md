@@ -59,6 +59,55 @@ Final statistics:
 
 ## Question 2
 ```shell
+./scheduler.py -p SJF -l 100,200,300 -c
+ARG policy SJF
+ARG jlist 100,200,300
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 100.0 )
+  Job 1 ( length = 200.0 )
+  Job 2 ( length = 300.0 )
+
+
+** Solutions **
+
+Execution trace:
+  [ time   0 ] Run job 0 for 100.00 secs ( DONE at 100.00 )
+  [ time 100 ] Run job 1 for 200.00 secs ( DONE at 300.00 )
+  [ time 300 ] Run job 2 for 300.00 secs ( DONE at 600.00 )
+
+Final statistics:
+  Job   0 -- Response: 0.00  Turnaround 100.00  Wait 0.00
+  Job   1 -- Response: 100.00  Turnaround 300.00  Wait 100.00
+  Job   2 -- Response: 300.00  Turnaround 600.00  Wait 300.00
+
+  Average -- Response: 133.33  Turnaround 333.33  Wait 133.33
+```
+```shell
+./scheduler.py -p FIFO -l 100,200,300 -c
+ARG policy FIFO
+ARG jlist 100,200,300
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 100.0 )
+  Job 1 ( length = 200.0 )
+  Job 2 ( length = 300.0 )
+
+
+** Solutions **
+
+Execution trace:
+  [ time   0 ] Run job 0 for 100.00 secs ( DONE at 100.00 )
+  [ time 100 ] Run job 1 for 200.00 secs ( DONE at 300.00 )
+  [ time 300 ] Run job 2 for 300.00 secs ( DONE at 600.00 )
+
+Final statistics:
+  Job   0 -- Response: 0.00  Turnaround 100.00  Wait 0.00
+  Job   1 -- Response: 100.00  Turnaround 300.00  Wait 100.00
+  Job   2 -- Response: 300.00  Turnaround 600.00  Wait 300.00
+
+  Average -- Response: 133.33  Turnaround 333.33  Wait 133.33
+
 ```
 
 ## Question 3
