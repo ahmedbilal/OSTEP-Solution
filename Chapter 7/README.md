@@ -58,6 +58,9 @@ Final statistics:
 ```
 
 ## Question 2
+
+### Now do the same but with jobs of different lengths: 100, 200, and 300
+
 ```shell
 ./scheduler.py -p SJF -l 100,200,300 -c
 ARG policy SJF
@@ -111,6 +114,9 @@ Final statistics:
 ```
 
 ## Question 3
+
+### Now do the same, but also with the RR scheduler and a time-slice of 1
+
 ```shell
 ./scheduler.py -p RR -q 1 -l 100,200,300 -c
 ARG policy RR
