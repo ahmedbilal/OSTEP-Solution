@@ -112,6 +112,34 @@ Final statistics:
 
 ## Question 3
 ```shell
+./scheduler.py -p RR -q 1 -l 100,200,300 -c
+ARG policy RR
+ARG jlist 100,200,300
+
+Here is the job list, with the run time of each job: 
+  Job 0 ( length = 100.0 )
+  Job 1 ( length = 200.0 )
+  Job 2 ( length = 300.0 )
+
+
+** Solutions **
+
+Execution trace:
+  [ time   0 ] Run job   0 for 1.00 secs
+  [ time   1 ] Run job   1 for 1.00 secs
+  [ time   2 ] Run job   2 for 1.00 secs
+  ...
+  [ time 596 ] Run job   2 for 1.00 secs
+  [ time 597 ] Run job   2 for 1.00 secs
+  [ time 598 ] Run job   2 for 1.00 secs
+  [ time 599 ] Run job   2 for 1.00 secs ( DONE at 600.00 )
+
+Final statistics:
+  Job   0 -- Response: 0.00  Turnaround 298.00  Wait 198.00
+  Job   1 -- Response: 1.00  Turnaround 499.00  Wait 299.00
+  Job   2 -- Response: 2.00  Turnaround 600.00  Wait 300.00
+
+  Average -- Response: 1.00  Turnaround 465.67  Wait 265.67
 ```
 
 ## Question 4
