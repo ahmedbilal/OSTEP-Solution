@@ -149,7 +149,7 @@ Final statistics:
 For Jobs having same length, SJF delivers the same turnaround times as FIFO.
 
 ```shell
-./scheduler.py -p LIFO -l 100,100,100 -c
+./scheduler.py -p FIFO -l 100,100,100 -c
 ```
 
 ```shell
