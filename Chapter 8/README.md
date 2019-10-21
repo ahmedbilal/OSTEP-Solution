@@ -23,7 +23,7 @@ and
 #### Example 1
 
 ```bash
-./mlfq.py -n 3 -l 0,200,0 -c
+./mlfq.py -n 3 -l 0,200,0 -q 20 -c
 ```
 
 #### Example 2
