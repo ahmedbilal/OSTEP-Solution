@@ -55,6 +55,7 @@ From Time 0 to 201, Job 0 runs for 200 time unit while Job 1 runs for 2 time uni
 ```
 
 ## Question 5
+###  Given a system with a quantum length of 10 ms in its highest queue, how often would you have to boost jobs back to the highest priority level (with the -B flag) in order to guarantee that a single longrunning (and potentially-starving) job gets at least 5% of the CPU?
 
 The answer is '200ms'. Time quantum of question 5 is '10ms'. After Job1 is executed in 10ms, priority will be lowered. If other jobs that has lower than 10ms, then job1 will not get any chance of execution.
 
