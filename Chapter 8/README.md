@@ -60,7 +60,7 @@ From Time 0 to 201, Job 0 runs for 200 time unit while Job 1 runs for 2 time uni
 Time quantum would have to be 200 seconds.
 A longrunning job would initially get 10s in Q1.
 Let us assume worst-case, which is that Q1 is 100% utilized so the job would be demoted and would have to wait an additional 180s before getting priority boosted.
-This would let the job run 10/200=.05% of the time steps.
+This would let the job run 10/200=.05=5% of the time steps.
 
 
 ## Question 6
