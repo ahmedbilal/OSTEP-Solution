@@ -63,7 +63,7 @@ So this is the situation that we have to solve. If we boost properly(like at lea
 
 <!--we have to devide 10ms to X because Job1 is at least executed once-->
 
-$(10ms/X)*100>=0.05$ 
+$$ (10ms/X)*100>=0.05 $$ 
 
 $X<=200ms$
 
