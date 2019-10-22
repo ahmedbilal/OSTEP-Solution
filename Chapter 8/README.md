@@ -55,18 +55,13 @@ From Time 0 to 201, Job 0 runs for 200 time unit while Job 1 runs for 2 time uni
 ```
 
 ## Question 5
+###  Given a system with a quantum length of 10 ms in its highest queue, how often would you have to boost jobs back to the highest priority level (with the -B flag) in order to guarantee that a single longrunning (and potentially-starving) job gets at least 5% of the CPU?
 
-The answer is '200ms'. Time quantum of question 5 is '10ms'. After Job1 is executed in 10ms, priority will be lowered. If other jobs that has lower than 10ms, then job1 will not get any chance of execution.
+Time quantum would have to be 200 seconds.
+A longrunning job would initially get 10s in Q1.
+Let us assume worst-case, which is that Q1 is 100% utilized so the job would be demoted and would have to wait an additional 180s before getting priority boosted.
+This would let the job run 10/200=.05=5% of the time steps.
 
-So this is the situation that we have to solve. If we boost properly(like at least 5% in this problem), it will regain its priority to be in queue. Equation will be like this.
-
-<!--we have to devide 10ms to X because Job1 is at least executed once-->
-
-$(10ms/X)*100>=0.05$ 
-
-$X<=200ms$
-
-Assume that we have 200ms boost period. When Job1 was executed by 10ms and priority get lowered, boost will give every job a highest priority. Job1 will get guaranteed execution time at least 5% (That means if you set boost time lower than 200ms Job1 will get higher CPU time)
 
 ## Question 6
 
