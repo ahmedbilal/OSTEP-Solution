@@ -1,6 +1,5 @@
 # OSTEP Solution
-## Work In Progress
-If you want to contribute or found some mistake just send me email at [ahmedbilal96@gmail.com](mailto:ahmedbilal96@gmail.com).
+If you want to contribute or found some mistake just send me email at [ahmedbilal96@gmail.com](mailto:ahmedbilal96@gmail.com) or fork the repository, make your changes and then make pull request in my repo.
 
 
 ## Index
