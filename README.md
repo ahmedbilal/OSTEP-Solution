@@ -3,13 +3,6 @@
 If you want to contribute or found some mistake just send me email at [ahmedbilal96@gmail.com](mailto:ahmedbilal96@gmail.com).
 
 
-## Slides
-
-[Slides By Prof. Kai Dong](http://cscwd2006.seu.edu.cn/PersonalPage/dk/courses.htm)
-**(External Link)**
-
-if the above link does not work [Slides by Prof. Kai Dong](https://mega.nz/#F!5EJWQLTb!Yh-BmhHr31xi406K0UQIrQ)
-
 ## Index
 
 * [Chapter 5](https://github.com/ahmedbilal/OSTEP-Solution/tree/master/Chapter%205)
