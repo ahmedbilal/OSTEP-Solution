@@ -22,7 +22,9 @@ Run all the following commands and see their output. They are different from eac
 
 ### Now run with two specific jobs: each of length 10, but one (job 0) with just 1 ticket and the other (job 1) with 100 (e.g., -l 10:1,10:100). What happens when the number of tickets is so imbalanced? Will job 0 ever run before job 1 completes? How often? In general, what does such a ticket imbalance do to the behavior of lottery scheduling?
 
-The job with most tickets will surely monoplize the cpu. The chances that job 0 ever run before job 1 is just less than 1% (0.99099%). Such ticket imbalance change the behavior of lottery scheduler from fair-share schedular to unfair-share schedular. It would look similar to sequential schedular which run jobs in some pre-defined order.
+For job 1 to complete before job 0 begins, we must choose job 1's 100 tickets out of the total 101 ticket for ten iterations in a row. This is equal to (100/101)^ 10 ~= 0.91. Therefore, job 0 will have a 1 - 0.91 = 0.09 chance of running before job 1 finishes.
+
+This imbalance essentially makes the system a sequential scheduler. 
 
 ## Question 3
 
