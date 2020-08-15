@@ -91,7 +91,9 @@ The lookup for enough empty space slot speeds up when we use first fit. Because,
 
 ### For the above questions, how the list is kept ordered can affect the time it takes to find a free location for some of the policies. Use the different free list orderings (-l ADDRSORT, -l SIZESORT+, -l SIZESORT-) to see how the policies and the list orderings interact.
 
-Time remain unaffected in both best and worst fit policy because these have to scan the whole list. However, in first fit only sizesort- (descending order) decrease the time to find a free location because first fit chooses the appropriate size free location that come first. So, if the largest free memory location is head of list then all allocation are from this free mem. block because it fulfills the requirement of first fit policy.
+* BEST: In SIZESORT+, we do not need to traverse the entire list, and we can stop when we find the first biggest element. So SIZESORT+ speeds ups BEST.
+* WORST: In SIZESORT-, we get the largest chunk of memory first, so memory allocation time is O(1).
+* FIRST: SIZESORT- is fastest, as each first call will grant an appropriate sized memory allocation or fail.
 
 ## Question 5
 

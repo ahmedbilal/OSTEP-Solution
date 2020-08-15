@@ -48,10 +48,10 @@ If we add --numQueues=1 then scheduler would perform like RR scheduler.
 
 ### Craft a workload with two jobs and scheduler parameters so that one job takes advantage of the older Rules 4a and 4b (turned on with the -S flag) to game the scheduler and obtain 99% of the CPU over a particular time interval.
 
-From Time 0 to 201, Job 0 runs for 200 time unit while Job 1 runs for 2 time unit. So, Job 0 runs for 99% of time during this particular interval.
+Job 0 will do 99 seconds of work, 1 second of fake IO, and then return to to 99 seconds of work again. 
 
 ```bash
-./mlfq.py -n 3 -i 0 -l 0,200,1:0,50,0 -S -c -Q 2,2,3
+./mlfq.py -l 0,1000,99:0,1000,0 -q 100 -i 1 -I -S```
 ```
 
 ## Question 5

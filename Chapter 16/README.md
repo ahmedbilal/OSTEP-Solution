@@ -149,7 +149,11 @@ segmentation.py -a 16 -p 128
 
 ### Assuming we want to generate a problem where roughly 90% of the randomly-generated virtual addresses are valid (i.e., not segmentation violations). How should you configure the simulator to do so? Which parameters are important?
 
-
+We just need to set the bounds to be about 90% of the address space. For instance:
+```sh
+./segmentation.py -a 256 -p 1024 --b0 0 --l0 115 --b1 1024 --l1 115 -c -n 100
+```
+As 256 * 0.9 ~= 115.
 
 ## Question 5
 
