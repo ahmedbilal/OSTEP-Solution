@@ -17,11 +17,11 @@ So, each maintain their own copy of variables.
 ### Write a program that opens a file (with the open() system call) and then calls fork() to create a new process. Can both the child and parent access the file descriptor returned by open()? What happens when they are writing to the file concurrently, i.e., at the same time?
 
 
-**This Answer need verification** Both child and parent can access the file descriptor opened using **open()**.
+Both child and parent can access the file descriptor opened using **open()**.
 
 Both are able to write to the file but the order in which they do is un-deterministic (*if we don't use **wait()***).
 
-**Note:** It may be possible that only one was able to write overwriting the other one.
+
 
 ## Question 3
 
