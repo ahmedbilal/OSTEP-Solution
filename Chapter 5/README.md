@@ -86,9 +86,11 @@ able to write something on the screen using
 
 ### Write a program that creates two children, and connects the standard output of one to the standard input of the other, using the pipe() system call.
 
-My program **question8.c** is not able to fulfill what is asked however it redirect **stdout** of 1st child to **stdout** of 2nd child.
-
-*(Question asks to redirect 1st child **stdout** to 2nd child **stdin**)*.
+We create a pipe with the pipe() system call, exiting if unsuccessful.
+We create the first child, which we call A, with a fork() call, then, in the section of code running for the parent, we make a second fork() call to make the second child, which we call B.
+Child A uses dup2 to make stdout point to the write end of the pipe and passes a string to the write end of the pipe.
+Child B uses dup2 to make stdin point to the read end of the pipe and reads from the read end of the pipe.
+This connects the stdout of A to the stdin of B.
 
 ### Note
 
