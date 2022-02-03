@@ -38,10 +38,19 @@ Both are able to write to the file but the order in which they do is un-determin
 
 See question4.c
 Each variant serves its own purpose (altough they can be interchangbly used with little modification).
+```c
+#include <unistd.h>
 
-1. **execl** and **execv** are nearly identical (have very little difference).
-1. **execlp** and **execvp** are nearly identical.
-1. **execle** and **execvpe** are nearly identical.
+int execl(const char *filepath, const char* arg1, const char* arg2,...)
+int execlp(const char *filename, const char* arg1, const char* arg2,...)
+int execle(const char *filepath, const char* arg1, const char* arg2,..., char* const envp[])
+int execv(const char* filepath, char*argv[])
+int execvp(const char* filename, char *argv[])
+int execve(const char* filepath, char* argv[], char* const envp[])
+```
+1. **execl** and **execv** are nearly identical (have very little difference). They can execute commands given absolute path.
+1. **execlp** and **execvp** are nearly identical. They can execute commands included within the **PATH** enviornment given the command name.
+1. **execle** and **execvpe** are nearly identical. They can execute commands within specific enviornments.
 
 ### Rules
 
