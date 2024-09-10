@@ -153,7 +153,7 @@ We just need to set the bounds to be about 90% of the address space. For instanc
 ```sh
 ./segmentation.py -a 256 -p 1024 --b0 0 --l0 115 --b1 1024 --l1 115 -c -n 100
 ```
-As 256 * 0.9 ~= 115.
+As (256 * 0.9)/2 ~= 115. Note: we have 2 segments.
 
 ## Question 5
 
